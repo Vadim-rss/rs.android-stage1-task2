@@ -1,5 +1,7 @@
 package subtask2
 
+import java.lang.StringBuilder
+
 class TimeConverter {
 
     fun toTextFormat(hour: String, minute: String): String {
@@ -8,9 +10,7 @@ class TimeConverter {
         var s = StringBuilder()
         val arr = arrayOf("one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
                 "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
-                "seventeen", "eighteen", "nineteen", "twenty", "twenty one", "twenty two",
-                "twenty three", "twenty four", "twenty five", "twenty six", "twenty seven",
-                "twenty eight", "twenty nine")
+                "seventeen", "eighteen", "nineteen", "twenty")
         if (h > 12 || m > 59) return ""
         when (minute) {
             "00" -> return arr[h - 1] + " o' clock"
