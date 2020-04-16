@@ -6,7 +6,7 @@ import java.time.LocalDate
 
 class Blocks {
 
-    fun getData(blockA: Array<Any>, blockB: KClass<*>): Any {
+    fun getData(blockA: Array<*>, blockB: KClass<*>): Any {
         if (blockB == Int::class){
             var blockC: Int = 0
             blockA.forEach{if(it is Int) blockC += it}
